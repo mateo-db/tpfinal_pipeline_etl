@@ -31,13 +31,13 @@
 
 #### Analizando el campo `id_transaccion`, podemos detectar la cantidad de _75_ valores duplicados. Esto es un problema ya que los datos de esta columna deben ser _identificadores únicos_ para cada registro que representa una transacción.
 
-#### Una posible solución en este caso sería tratar identificar y salvaguardar los registros con IDs repetidos, asignandoles IDs únicos.
+#### Una posible solución en este caso sería tratar de identificar y salvaguardar los registros con IDs repetidos, asignandoles IDs únicos.
 
 ---
 
 ## _Valores nulos_
 
-#### No se detectaron valores nulos existentes en los campos.
+#### Analizando el campo `sucursal`, se detectó la cantidad de _132_ valores nulos. Supone un problema ya que cada registro de transacción debería tener su dato sobre a qué sucursal corresponde. La posible solución sería identificar aquellos registros con valores nulos en campo `sucursal`, apartarlos y ver si se puede deducir el dato a completar de otra columna.
 
 ---
 

@@ -54,6 +54,19 @@
 
 ---
 
+## _Rango de Valores Númericos_
+
+#### Realizando la evaluación de valores mínimos, máximos y menores a cero, se llegó a estos resultados con respecto a los siguientes campos:
+
+- `monto`:
+  - Se halló que el valor mínimo dentro de este campo es de _-898513.02_. Esto supone un problema, ya que un campo númerico que contiene _montos_ de transacciones no puede contener valores númericos negativos. La empresa especifica que los valores del campo `monto` deben ser mayores a 0.
+
+- `id_cuenta`: No se encontraron valores númericos negativos.
+- `id_sucursal`: No se encontraron valores númericos negativos.
+- `id_transaccion`: No se encontraron valores númericos negativos.
+
+#### La solución en este caso sería identificar los registros del campo `monto` con valores menores a cero y descartarlos hacia una tabla de rechazados, donde se tratará de limpiar los datos posibles.
+
 ## _Conclusión_
 
 ### En este archivo markdown se remarcó, a raiz de una investigación previa de la fuente de datos, inconsistencias específicas por campos y las posibles soluciones/validaciones a implementar posteriormente en nuestro proceso ETL.
